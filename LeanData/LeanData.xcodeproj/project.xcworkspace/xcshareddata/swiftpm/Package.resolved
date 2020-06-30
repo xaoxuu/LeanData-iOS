@@ -1,0 +1,97 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://gitee.com/mirror-x/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "2777659076fda38bd4e487739ee331c7a65b5924",
+          "version": "5.2.1"
+        }
+      },
+      {
+        "package": "GRDB",
+        "repositoryURL": "https://gitee.com/mirror-x/GRDB.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "5ee47c3c2765bdfde0f44c2ea9a263f6aa252d63",
+          "version": "4.14.0"
+        }
+      },
+      {
+        "package": "Inspire",
+        "repositoryURL": "https://github.com/xaoxuu/Inspire.git",
+        "state": {
+          "branch": null,
+          "revision": "22c89fa2ff06bcd44b8c0500a82e64d4baf80387",
+          "version": "2.0.1"
+        }
+      },
+      {
+        "package": "LeanCloud",
+        "repositoryURL": "https://gitee.com/mirror-x/leancloud",
+        "state": {
+          "branch": null,
+          "revision": "f640af1776064ea0103f073afbb953b4819a68d6",
+          "version": "17.5.6"
+        }
+      },
+      {
+        "package": "LoginUI",
+        "repositoryURL": "https://github.com/xaoxuu/LoginUI",
+        "state": {
+          "branch": "master",
+          "revision": "942b4cd50ada3547d569141f01af4d4a56a0aec4",
+          "version": null
+        }
+      },
+      {
+        "package": "ProHUD",
+        "repositoryURL": "https://github.com/xaoxuu/ProHUD",
+        "state": {
+          "branch": null,
+          "revision": "fd8cb906b7c668c7800bfb91e1f89893d4fc50a4",
+          "version": "2.2.2"
+        }
+      },
+      {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
+        "state": {
+          "branch": null,
+          "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "Starscream",
+        "repositoryURL": "https://gitee.com/mirror-x/Starscream.git",
+        "state": {
+          "branch": null,
+          "revision": "e6b65c6d9077ea48b4a7bdda8994a1d3c6969c8d",
+          "version": "3.1.1"
+        }
+      },
+      {
+        "package": "swift-nio-zlib-support",
+        "repositoryURL": "https://github.com/apple/swift-nio-zlib-support.git",
+        "state": {
+          "branch": null,
+          "revision": "37760e9a52030bb9011972c5213c3350fa9d41fd",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SwiftProtobuf",
+        "repositoryURL": "https://gitee.com/mirror-x/swift-protobuf.git",
+        "state": {
+          "branch": null,
+          "revision": "7f36441e3372665b1b414f8ac93b5905cc42a405",
+          "version": "1.9.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
