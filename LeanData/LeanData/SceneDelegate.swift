@@ -33,8 +33,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         LCApplication.logLevel = .debug
         
-        LoginManager.setup()
-        
         
     }
 

@@ -22,15 +22,6 @@ struct LoginManager {
     }
 
     
-    
-    static func setup() {
-//        if let user = LCApplication.default.currentUser {
-//            
-//        } else {
-//            
-//        }
-    }
-    
     static func login(from vc: UIViewController) {
         // 设置登录
         LoginUI.logo = UIImage(systemName: "icloud")
