@@ -30,7 +30,8 @@ class DataVM: NSObject {
     
     func new() -> LCObject {
         let obj = LCObject(className: schema)
-        
+        try? obj.set("test", value: "")
+        try? obj.set("msg", value: "")
         return obj
     }
     
