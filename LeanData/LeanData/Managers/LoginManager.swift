@@ -12,8 +12,27 @@ import LeanCloud
 import ProHUD
 
 struct LoginManager {
+    
+    static var isLogin: Bool {
+        if let _ = LCApplication.default.currentUser {
+            return true
+        } else {
+            return false
+        }
+    }
 
+    
+    
     static func setup() {
+//        if let user = LCApplication.default.currentUser {
+//            
+//        } else {
+//            
+//        }
+    }
+    
+    static func login(from vc: UIViewController) {
+        // 设置登录
         LoginUI.logo = UIImage(systemName: "icloud")
         LoginUI.title = "LeanData"
         LoginUI.agreementURL = URL(string: "https://xaoxuu.com")
@@ -82,11 +101,6 @@ struct LoginManager {
                 }
             }
         }
-        
-    }
-    
-    static func login(from vc: UIViewController) {
-        
         LoginUI.accountDefault = UserDefaults.standard.string(forKey: "leancloud.account")
         LoginUI.present(from: vc)
     }

@@ -8,6 +8,11 @@
 
 import UIKit
 import LeanCloud
+@_exported import SnapKit
+@_exported import Inspire
+@_exported import ProHUD
+
+let ipr = Inspire.shared
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,11 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        var configuration = LCApplication.Configuration.default
+        configuration.HTTPURLCache = URLCache(memoryCapacity: 100 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024)
         
-        try? LCApplication.default.set(id: "7yIoRlSmfX09vQCERsuWzFnx-MdYXbMMI", key: "3zCL5GFePTUjwbqLop44QFbr")
+        // test
+        try? LCApplication.default.set(id: "7yIoRlSmfX09vQCERsuWzFnx-MdYXbMMI", key: "3zCL5GFePTUjwbqLop44QFbr", configuration: configuration)
+        
         LCApplication.logLevel = .debug
         
         LoginManager.setup()
+        
         
     }
 
