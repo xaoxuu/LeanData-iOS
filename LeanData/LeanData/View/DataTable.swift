@@ -9,9 +9,6 @@
 import UIKit
 
 class DataTable: UITableView {
-
-    var schema: String?
-    var preferredKey: String?
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: .insetGrouped)

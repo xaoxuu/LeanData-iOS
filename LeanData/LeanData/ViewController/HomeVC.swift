@@ -44,6 +44,7 @@ class HomeVC: BaseVC {
             mk.right.equalToSuperview().offset(-20)
             mk.bottom.equalToSuperview().offset(-60)
         }
+        addBtn.addTarget(self, action: #selector(self.didTappedAddBtn(_:)), for: .touchUpInside)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.onNeedReload(_:)), name: NSNotification.Name.init("reload"), object: nil)
     }
@@ -82,7 +83,13 @@ class HomeVC: BaseVC {
             LoginManager.login(from: self)
         }
     }
-
+    
+    @objc func didTappedAddBtn(_ sender: UIButton) {
+        let obj = vm.new()
+        let vc = DataDetailVC(object: obj)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc func onNeedReload(_ sender: NSNotification) {
         reloadData(toast: false, completion: nil)
     }

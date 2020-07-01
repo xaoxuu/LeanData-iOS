@@ -28,6 +28,12 @@ class DataVM: NSObject {
         self.schema = schema
     }
     
+    func new() -> LCObject {
+        let obj = LCObject(className: schema)
+        
+        return obj
+    }
+    
     func reload(completion: @escaping (LCError?) -> Void) {
         dataList.removeAll()
         skip = 0

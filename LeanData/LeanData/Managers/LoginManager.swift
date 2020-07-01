@@ -21,6 +21,9 @@ struct LoginManager {
         }
     }
 
+    static func logout() {
+        LCUser.logOut()
+    }
     
     static func login(from vc: UIViewController) {
         // 设置登录

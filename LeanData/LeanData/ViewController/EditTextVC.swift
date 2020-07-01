@@ -11,9 +11,19 @@ import UIKit
 class EditTextVC: BaseVC {
 
     let tv = UITextView()
-    
+    let titleLabel = UILabel()
     private var saveCallback: ((String) -> Void)?
     
+    init(title: String, text: String?, didSave: @escaping (String) -> Void) {
+        super.init(nibName: nil, bundle: nil)
+        titleLabel.text = title
+        tv.text = text
+        saveCallback = didSave
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,39 +33,51 @@ class EditTextVC: BaseVC {
         tv.backgroundColor = .systemBackground
         tv.layer.cornerRadius = 12
         self.view.addSubview(self.tv)
-        self.tv.snp.makeConstraints { (mk) in
-            mk.left.equalToSuperview().offset(20)
-            mk.top.equalToSuperview().offset(149 + 20)
-            mk.right.equalToSuperview().offset(-20)
-            mk.height.equalTo(200)
-        }
         tv.contentInset.left = 8
         tv.contentInset.right = 8
         tv.textAlignment = .justified
         tv.contentOffset = .zero
         
+        
+        
+        titleLabel.font = .bold(28)
+        view.addSubview(titleLabel)
+        
+        let saveBtn = BaseButton(title: "保存并退出") { [weak self] in
+            self?.tv.resignFirstResponder()
+            self?.dismiss(animated: true, completion: nil)
+            self?.saveCallback?(self?.tv.text ?? "")
+        }
+        saveBtn.layer.cornerRadius = ipr.layout.cornerRadius.small
+        view.addSubview(saveBtn)
+        saveBtn.snp.makeConstraints { (mk) in
+            mk.height.equalTo(40)
+            mk.right.equalToSuperview().offset(-20)
+            mk.top.equalToSuperview().offset(32)
+            mk.width.equalTo(134)
+        }
+        
+        titleLabel.snp.makeConstraints { (mk) in
+            mk.left.equalToSuperview().offset(20)
+            mk.centerY.equalTo(saveBtn)
+        }
+        
+        tv.snp.makeConstraints { (mk) in
+            mk.left.equalToSuperview().offset(20)
+            mk.top.greaterThanOrEqualTo(titleLabel.snp.bottom).offset(32)
+            mk.top.greaterThanOrEqualTo(saveBtn.snp.bottom).offset(32)
+            mk.right.equalToSuperview().offset(-20)
+            mk.height.equalTo(200)
+        }
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         tv.becomeFirstResponder()
     }
     
-    func didSave(_ callback: @escaping (String) -> Void) {
-        saveCallback = callback
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-
-    
-    override func loadRightNavBtnImage() -> UIImage? {
-        return UIImage(systemName: "checkmark.circle.fill")
-    }
-    
-    override func didTappedRightNavBtn(_ sender: UIBarButtonItem) {
-        saveCallback?(tv.text)
-        navigationController?.popViewController(animated: true)
+        tv.resignFirstResponder()
     }
     
 }

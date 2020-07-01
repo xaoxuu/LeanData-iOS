@@ -70,18 +70,8 @@ extension DataDetailVM: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = EditTextVC()
         let k = keys[indexPath.section]
-        vc.title = k
-        let obj = object.get(k)
-        if let str = obj?.stringValue {
-            vc.tv.text =  str
-        } else if let date = obj?.dateValue {
-            vc.tv.text =  date.fullDesc
-        } else {
-            vc.tv.text = obj?.lcValue.jsonString
-        }
-        vc.didSave { (str) in
+        let vc = EditTextVC(title: k, text: "") { (str) in
             ProHUD.Alert.push("update", scene: .update) { (a) in
                 a.update { (vm) in
                     vm.title = "正在更新"
@@ -112,7 +102,16 @@ extension DataDetailVM: UITableViewDelegate {
                 
             }
         }
-        controller?.navigationController?.pushViewController(vc, animated: true)
+        let obj = object.get(k)
+        if let str = obj?.stringValue {
+            vc.tv.text =  str
+        } else if let date = obj?.dateValue {
+            vc.tv.text =  date.fullDesc
+        } else {
+            vc.tv.text = obj?.lcValue.jsonString
+        }
+        controller?.present(vc, animated: true, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

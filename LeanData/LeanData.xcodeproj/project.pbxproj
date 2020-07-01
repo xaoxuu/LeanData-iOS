@@ -25,10 +25,13 @@
 		9552A0A224AAED820040EC46 /* ProHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 9552A0A124AAED820040EC46 /* ProHUD */; };
 		9552A0A524AAEF750040EC46 /* LeanCloud in Frameworks */ = {isa = PBXBuildFile; productRef = 9552A0A424AAEF750040EC46 /* LeanCloud */; };
 		95C8B9CB24AC3F3300542BEE /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8B9CA24AC3F3300542BEE /* DateUtils.swift */; };
-		95C8B9CD24AC6A6A00542BEE /* DataDetailTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8B9CC24AC6A6A00542BEE /* DataDetailTable.swift */; };
 		95C8B9CF24AC6A8300542BEE /* DataDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8B9CE24AC6A8300542BEE /* DataDetailVM.swift */; };
 		95C8B9D124AC6D4900542BEE /* DataDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8B9D024AC6D4900542BEE /* DataDetailVC.swift */; };
 		95C8B9D324AC77AD00542BEE /* EditTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8B9D224AC77AD00542BEE /* EditTextVC.swift */; };
+		95C8B9D524AC97E800542BEE /* BaseListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8B9D424AC97E800542BEE /* BaseListVC.swift */; };
+		95C8B9D824AC9A3400542BEE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95C8B9D724AC9A3400542BEE /* RxSwift */; };
+		95C8B9DA24AC9A3400542BEE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 95C8B9D924AC9A3400542BEE /* RxCocoa */; };
+		95C8B9DE24AC9A8C00542BEE /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8B9DD24AC9A8C00542BEE /* BaseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,10 +52,11 @@
 		9552A09824AAED430040EC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9552A09A24AAED430040EC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95C8B9CA24AC3F3300542BEE /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
-		95C8B9CC24AC6A6A00542BEE /* DataDetailTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailTable.swift; sourceTree = "<group>"; };
 		95C8B9CE24AC6A8300542BEE /* DataDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailVM.swift; sourceTree = "<group>"; };
 		95C8B9D024AC6D4900542BEE /* DataDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailVC.swift; sourceTree = "<group>"; };
 		95C8B9D224AC77AD00542BEE /* EditTextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextVC.swift; sourceTree = "<group>"; };
+		95C8B9D424AC97E800542BEE /* BaseListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseListVC.swift; sourceTree = "<group>"; };
+		95C8B9DD24AC9A8C00542BEE /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			files = (
 				953BB84324AB495200A838A2 /* LoginUI in Frameworks */,
 				9552A0A524AAEF750040EC46 /* LeanCloud in Frameworks */,
+				95C8B9DA24AC9A3400542BEE /* RxCocoa in Frameworks */,
+				95C8B9D824AC9A3400542BEE /* RxSwift in Frameworks */,
 				9552A0A224AAED820040EC46 /* ProHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +87,7 @@
 		953BB84924AC20E500A838A2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				95C8B9D424AC97E800542BEE /* BaseListVC.swift */,
 				953BB84724AC20DF00A838A2 /* BaseNavVC.swift */,
 				953BB84C24AC212000A838A2 /* BaseVC.swift */,
 			);
@@ -103,7 +110,7 @@
 			children = (
 				953BB85824AC2E7A00A838A2 /* DataTable.swift */,
 				953BB85624AC2DE100A838A2 /* DataCell.swift */,
-				95C8B9CC24AC6A6A00542BEE /* DataDetailTable.swift */,
+				95C8B9DD24AC9A8C00542BEE /* BaseButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +179,8 @@
 				9552A0A124AAED820040EC46 /* ProHUD */,
 				9552A0A424AAEF750040EC46 /* LeanCloud */,
 				953BB84224AB495200A838A2 /* LoginUI */,
+				95C8B9D724AC9A3400542BEE /* RxSwift */,
+				95C8B9D924AC9A3400542BEE /* RxCocoa */,
 			);
 			productName = LeanData;
 			productReference = 9552A08924AAED420040EC46 /* LeanData.app */;
@@ -205,6 +214,7 @@
 				9552A0A024AAED820040EC46 /* XCRemoteSwiftPackageReference "ProHUD" */,
 				9552A0A324AAEF750040EC46 /* XCRemoteSwiftPackageReference "leancloud" */,
 				953BB84124AB495200A838A2 /* XCRemoteSwiftPackageReference "LoginUI" */,
+				95C8B9D624AC9A3400542BEE /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 9552A08A24AAED420040EC46 /* Products */;
 			projectDirPath = "";
@@ -242,12 +252,13 @@
 				953BB84824AC20DF00A838A2 /* BaseNavVC.swift in Sources */,
 				953BB84D24AC212000A838A2 /* BaseVC.swift in Sources */,
 				953BB85924AC2E7A00A838A2 /* DataTable.swift in Sources */,
-				95C8B9CD24AC6A6A00542BEE /* DataDetailTable.swift in Sources */,
 				9552A08F24AAED420040EC46 /* SceneDelegate.swift in Sources */,
 				95C8B9CF24AC6A8300542BEE /* DataDetailVM.swift in Sources */,
+				95C8B9D524AC97E800542BEE /* BaseListVC.swift in Sources */,
 				95C8B9D124AC6D4900542BEE /* DataDetailVC.swift in Sources */,
 				953BB85224AC27FA00A838A2 /* UserManager.swift in Sources */,
 				953BB85024AC25C300A838A2 /* UserCenterVC.swift in Sources */,
+				95C8B9DE24AC9A8C00542BEE /* BaseButton.swift in Sources */,
 				95C8B9D324AC77AD00542BEE /* EditTextVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +483,14 @@
 				minimumVersion = 17.5.6;
 			};
 		};
+		95C8B9D624AC9A3400542BEE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reactivex/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -489,6 +508,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9552A0A324AAEF750040EC46 /* XCRemoteSwiftPackageReference "leancloud" */;
 			productName = LeanCloud;
+		};
+		95C8B9D724AC9A3400542BEE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95C8B9D624AC9A3400542BEE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		95C8B9D924AC9A3400542BEE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95C8B9D624AC9A3400542BEE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

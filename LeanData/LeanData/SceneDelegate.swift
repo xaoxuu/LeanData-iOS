@@ -11,6 +11,8 @@ import LeanCloud
 @_exported import SnapKit
 @_exported import Inspire
 @_exported import ProHUD
+@_exported import RxSwift
+//@_exported import RxCocoa
 
 let ipr = Inspire.shared
 
