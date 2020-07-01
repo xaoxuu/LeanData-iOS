@@ -30,14 +30,13 @@ class EditTextVC: BaseVC {
         view.backgroundColor = .systemGroupedBackground
         
         tv.font = .regular(17)
-        tv.backgroundColor = .systemBackground
+        tv.backgroundColor = .secondarySystemGroupedBackground
         tv.layer.cornerRadius = 12
         self.view.addSubview(self.tv)
         tv.contentInset.left = 8
         tv.contentInset.right = 8
         tv.textAlignment = .justified
         tv.contentOffset = .zero
-        
         
         
         titleLabel.font = .bold(28)

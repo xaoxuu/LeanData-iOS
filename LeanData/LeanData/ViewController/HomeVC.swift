@@ -11,7 +11,7 @@ import UIKit
 class HomeVC: BaseVC {
     
     let table = DataTable()
-    let vm = DataVM(schema: "Comment")
+    let vm = DataVM(schema: UserDefaults.standard.string(forKey: "table") ?? "Comment")
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "LeanData"
@@ -95,6 +95,8 @@ class HomeVC: BaseVC {
     }
     func reloadData(toast: Bool = true, completion: (() -> Void)? = nil) {
         self.navigationItem.leftBarButtonItem?.isEnabled = false
+        let schema = UserDefaults.standard.string(forKey: "table") ?? "Comment"
+        vm.schema = schema
         if toast {
             Toast.push("reloadData", scene: .refresh) { (vc) in
                 vc.isRemovable = false
